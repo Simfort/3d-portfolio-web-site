@@ -14,7 +14,7 @@ export default function StackSection() {
   return (
     <section
       ref={ref}
-      className="col-span-full grid grid-cols-7 pb-[50px] grid-rows-[1fr_10fr] bg-[url(/stackBg.jpg)] gap-5 bg-no-repeat bg-cover bg-center border-green-950 border-b-2 border-t-2 ">
+      className="col-span-full grid grid-cols-7 pb-[50px] grid-rows-[1fr_10fr] bg-[url(/stackBg.jpg)] relative gap-5 bg-no-repeat bg-cover bg-center border-green-950 border-b-2 border-t-2 ">
       <div className="col-span-full">
         <h2 className="text-center  text-6xl  p-6  ">My stack</h2>
         <p className="opacity-50 text-center">
@@ -35,7 +35,8 @@ export default function StackSection() {
             ))}
           </Suspense>
         )}
-      </div>
+      </div>{" "}
+      <div className="bg-[url(/partBgHeader.png)] bg-size-[20%] rotate-180 rotate-x-180 bg-no-repeat bg-bottom-right z-2 absolute h-full bottom-0 top-0 w-full"></div>
     </section>
   );
 }
