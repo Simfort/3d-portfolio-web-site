@@ -22,12 +22,12 @@ export default function StackSection() {
         </p>
       </div>
       <div
-        className="grid grid-rows-3 grid-cols-6 justify-center col-start-2 col-span-5 w-full
+        className="grid grid-rows-3 grid-cols-6 max-lg:grid-cols-3 max-sm:flex max-sm:flex-col justify-center col-start-2 col-span-5 w-full
           rounded-full
           bg-linear-to-br from-green-400/20 via-emerald-500/30 to-teal-600/40
           shadow-2xl shadow-teal-500/25
-          backdrop-blur-sm
-          border border-white/10">
+          backdrop-blur-sm 
+          border border-white/10 relative z-20">
         {inView && (
           <Suspense fallback={<LoadingCanvas />}>
             {STACK_LOGOS.map((logo, i) => (

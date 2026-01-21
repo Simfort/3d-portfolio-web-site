@@ -7,7 +7,7 @@ import ContactSection from "./_components/Contact/ContactSection";
 const Header = lazy(() => import("./_components/Header"));
 export default function Home() {
   return (
-    <div className="grid grid-cols-7   w-full h-screen">
+    <div className="grid grid-cols-7 h-full   w-full ">
       <Header />
       <AboutSection />
       <WorkSection />

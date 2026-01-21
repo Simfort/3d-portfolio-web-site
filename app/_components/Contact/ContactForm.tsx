@@ -1,8 +1,11 @@
+"use client";
+import contactAction from "@/lib/contactAction";
+
 export default function ContactForm() {
   return (
     <form
-      action=""
-      className="col-start-2 col-span-2 min-h-[600px] flex flex-col gap-5 p-5 bg-primary rounded-xl">
+      action={contactAction}
+      className="col-start-2 col-span-2 min-h-[600px] max-lg:w-1/2 max-sm:w-[300px] flex flex-col gap-5 p-5 bg-primary rounded-xl">
       <h2 className="text-4xl">Contact Us</h2>
       <label htmlFor="name" className="flex flex-col gap-2">
         <h3>Your name</h3>
@@ -18,7 +21,7 @@ export default function ContactForm() {
         <h3>Your email</h3>
         <input
           placeholder="What`s your email"
-          className="bg-green-950 w-full invalid:border-red-700 border-2 border-green-800 rounded-xl p-2 outline-0 shadow"
+          className="bg-green-950 w-full invalid:border-red-700 border-2 border-green-800 pl-5 py-2 rounded-xl p-2 outline-0 shadow"
           type="email"
           name="email"
           required
@@ -28,7 +31,7 @@ export default function ContactForm() {
         <h3>Your message</h3>
         <textarea
           placeholder="What do you want say email"
-          className="bg-green-950 h-[150px] border-green-800 invalid:border-red-700 border-2 w-full rounded-xl p-2 outline-0 shadow"
+          className="bg-green-950 h-[150px] border-green-800 invalid:border-red-700 pl-5 py-2 border-2 w-full rounded-xl p-2 outline-0 shadow"
           name="desc"
           required
         />
