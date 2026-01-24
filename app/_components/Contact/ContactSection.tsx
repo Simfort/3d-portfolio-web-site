@@ -12,11 +12,11 @@ export default function ContactSection() {
   return (
     <section
       ref={ref}
-      className="min-h-screen col-span-full  relative h-full  bg-black">
+      className="min-h-screen col-span-full flex items-center justify-center relative h-full  bg-black">
       <div className="bg-[url(/partBgHeader.png)] bg-size-[20%] rotate-180 bg-no-repeat top-0 bottom-0 bg-bottom-right z-2 absolute h-full w-full"></div>
-      <div className="grid grid-cols-8 h-full mt-[20px] max-lg:flex max-lg:flex-col items-center relative z-10">
+      <div className="grid grid-cols-8  mt-[20px] w-full  max-lg:flex max-lg:flex-col items-center relative z-10">
         <ContactForm />
-        <div className="col-start-5 col-span-full  max-lg:w-full h-[500px] max-lg:h-[300px]">
+        <div className="col-start-5 col-span-full  max-lg:w-full h-screen max-lg:h-[300px]">
           {inView && (
             <Suspense fallback={<LoadingCanvas />}>
               {" "}
